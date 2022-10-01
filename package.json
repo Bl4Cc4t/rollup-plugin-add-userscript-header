@@ -1,16 +1,42 @@
 {
   "name": "rollup-plugin-add-userscript-header",
-  "version": "0.1.0",
-  "scripts": {
-    "build": "tsc"
+  "version": "0.1.1",
+  "description": "A rollup plugin that adds a userscript header to a .js file.",
+  "author": "schwarzkatz",
+  "license": "MIT",
+  "homepage": "https://github.com/Bl4Cc4t/rollup-plugin-add-userscript-header#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bl4Cc4t/rollup-plugin-add-userscript-header.git"
   },
-  "main": "dist/plugin.js",
+  "bugs": {
+    "url": "https://github.com/Bl4Cc4t/rollup-plugin-add-userscript-header/issues"
+  },
+  "keywords": [
+    "rollup",
+    "userscript"
+  ],
+  "scripts": {
+    "build": "yarn build:dts && yarn build:js",
+    "build:js": "rollup -c",
+    "build:dts": "cd src && tsc --emitDeclarationOnly && cd .."
+  },
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/plugin.es.js",
+  "types": "dist/plugin.d.ts",
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-typescript": "^7.18.6",
     "@babel/types": "^7.18.10",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "@types/babel__traverse": "^7.18.0",
     "@types/node": "^18.7.8",
     "rollup": "^2.78.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   },

@@ -7,29 +7,29 @@ export type Entries<T> = {
 }[keyof T][]
 
 export interface UserscriptMetadata {
-  name: string
-  namespace: string
-  version: string
-  author: string
-  description: string
-  license: string
-  homepage: string
-  icon: string
-  icon64: string
-  updateURL: string
-  downloadURL: string
-  supportURL: string
-  include: string[]
-  match: string[]
-  exclude: string[]
-  require: string[]
-  resource: Record<string, string> | string[]
-  connect: string[]
-  "run-at": "document-start" | "document-body" | "document-end" | "document-idle" | "context-menu"
-  antifeature: string[]
-  noframes: boolean
-  unwrap: boolean
-  grant: string[]
+  name?: string
+  namespace?: string
+  version?: string
+  author?: string
+  description?: string
+  license?: string
+  homepage?: string
+  icon?: string
+  icon64?: string
+  updateURL?: string
+  downloadURL?: string
+  supportURL?: string
+  include?: string[]
+  match?: string[]
+  exclude?: string[]
+  require?: string[]
+  resource?: Record<string, string> | string[]
+  connect?: string[]
+  "run-at"?: "document-start" | "document-body" | "document-end" | "document-idle" | "context-menu"
+  antifeature?: string[]
+  noframes?: boolean
+  unwrap?: boolean
+  grant?: string[]
 }
 
 export const META_ORDER = [
