@@ -1,1 +1,6 @@
+# compiled stuff
 dist
+
+# package manager
+node_modules
+.yarn
