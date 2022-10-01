@@ -33,10 +33,15 @@ This includes the following:
 - `window.onurlchange`
 
 
-## Options
+### Other tags
 You can specify more tags in `package.json` by adding a `userscriptMetadata` field.
 
 Alternatively, you can pass them to the plugin directly through the `rollup.config.js` / `rollup.config.ts` file.
+
+## Options
+The only option to set is the `meta` option. It contains all the tags you want to set.
+
+See the below for some examples!
 
 
 ## Examples
@@ -56,6 +61,8 @@ Alternatively, you can pass them to the plugin directly through the `rollup.conf
   },
   "main": "dist/goodtwitter2.user.js",
   "userscriptMetadata": {
+    "run-at": "document-start",
+    "icon": "https://www.google.com/s2/favicons?sz=64&domain=twitter.com",
     "match": [
       "https://twitter.com/*",
       "https://mobile.twitter.com/*"
@@ -79,6 +86,8 @@ Alternatively, you can pass them to the plugin directly through the `rollup.conf
 ```
 
 ### `rollup.config.js` / `rollup.config.ts`
+Alternative to using `package.json`
+
 ```js
 import addUserscriptHeader from "./packages/rollup-plugin-add-userscript-header"
 
@@ -103,6 +112,7 @@ The above examples place the following header into the output file:
 // @description   A try to make Twitter look good again.
 // @license       MIT
 // @homepage      https://github.com/Bl4Cc4t/GoodTwitter2#readme
+// @run-at        document-start
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // @grant         unsafeWindow
@@ -114,6 +124,7 @@ The above examples place the following header into the output file:
 // @require       https://github.com/Bl4Cc4t/GoodTwitter2/releases/latest/download/twitter.gt2eb.i18n.js
 // @resource      css https://github.com/Bl4Cc4t/GoodTwitter2/releases/latest/download/twitter.gt2eb.style.css
 // @resource      emojiRegex https://somesite.com/content/static/emoji-regex.txt
+// @icon          https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @updateURL     https://github.com/Bl4Cc4t/GoodTwitter2/releases/latest/download/dist/goodtwitter2.user.js
 // @downloadURL   https://github.com/Bl4Cc4t/GoodTwitter2/releases/latest/download/dist/goodtwitter2.user.js
 // ==/UserScript==

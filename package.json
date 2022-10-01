@@ -1,5 +1,6 @@
 {
   "name": "rollup-plugin-add-userscript-header",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc"
   },
