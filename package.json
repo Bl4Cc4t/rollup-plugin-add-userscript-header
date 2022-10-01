@@ -1,6 +1,21 @@
 {
   "name": "rollup-plugin-add-userscript-header",
   "version": "0.1.0",
+  "description": "A rollup plugin that adds a userscript header to a .js file.",
+  "author": "schwarzkatz",
+  "license": "MIT",
+  "homepage": "https://github.com/Bl4Cc4t/rollup-plugin-add-userscript-header#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bl4Cc4t/rollup-plugin-add-userscript-header.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bl4Cc4t/rollup-plugin-add-userscript-header/issues"
+  },
+  "keywords": [
+    "rollup",
+    "userscript"
+  ],
   "scripts": {
     "build": "tsc"
   },
