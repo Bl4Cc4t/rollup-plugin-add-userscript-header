@@ -7,14 +7,14 @@ A rollup plugin that adds a userscript header to a .js file.
 ### Added from `package.json` file
 By default, the plugin uses the following fields from the projects `package.json` file and adds tags accordingly:
 
-`package.json` field  | tag
-----------------------|----
-name                  | @name
-version               | @version
-author                | @author
-description           | @description
-license               | @license (unoffical tag)
-homepage              | @homepage
+| `package.json` field | tag                      |
+|----------------------|--------------------------|
+| name                 | @name                    |
+| version              | @version                 |
+| author               | @author                  |
+| description          | @description             |
+| license              | @license (unoffical tag) |
+| homepage             | @homepage                |
 
 #### @downloadURL & @updateURL
 These tags get populated via the `repository` field combined with the `main` field.
