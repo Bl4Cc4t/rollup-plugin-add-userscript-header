@@ -1,6 +1,6 @@
 {
     "name": "rollup-plugin-add-userscript-header",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A rollup plugin that adds a userscript header to a .js file.",
     "author": "schwarzkatz",
     "license": "MIT",
