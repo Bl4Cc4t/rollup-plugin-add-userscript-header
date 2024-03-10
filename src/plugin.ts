@@ -3,7 +3,7 @@ import path from "path"
 import parser from "@babel/parser"
 import traverse from "@babel/traverse"
 import { OutputPlugin } from "rollup"
-import { Entries, GM_GRANT, META_ORDER, PluginOptions, UserscriptMetadata } from "./types"
+import { Entries, META_ORDER, PluginOptions, UserscriptMetadata } from "./types"
 import "./extension/array.extension"
 
 
@@ -93,7 +93,7 @@ function getHeader(code: string, options: PluginOptions = {}) {
             if (path.parentPath.type == "MemberExpression") {
                 let parent = (path.parent as any).object.name
 
-                if (parent == "GM" && GM_GRANT.indexOf(name) > -1)
+                if (parent == "GM")
                     meta.grant.push(`GM.${name}`)
 
                 else if (parent == "window" && name.match(/^(close|focus|onurlchange)$/))
@@ -101,7 +101,7 @@ function getHeader(code: string, options: PluginOptions = {}) {
             }
 
             // unsafeWindow & GM_* calls
-            if (name == "unsafeWindow" || (name.match(/^GM_.+$/) && GM_GRANT.indexOf(name.slice(3)) > -1))
+            if (name == "unsafeWindow" || name.match(/^GM_.+$/))
                 meta.grant.push(path.node.name)
         },
 

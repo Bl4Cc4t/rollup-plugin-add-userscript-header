@@ -57,28 +57,3 @@ export const META_ORDER = [
     "updateURL",
     "downloadURL",
 ] as const
-
-export const GM_GRANT = [
-    "addElement",
-    "addStyle",
-    "addValueChangeListener",
-    "deleteValue",
-    "download",
-    "getResourceText",
-    "getResourceURL",
-    "getTab",
-    "getTabs",
-    "getValue",
-    "info",
-    "listValues",
-    "log",
-    "notification",
-    "openInTab",
-    "registerMenuCommand",
-    "removeValueChangeListener",
-    "saveTab",
-    "setClipboard",
-    "setValue",
-    "unregisterMenuCommand",
-    "xmlhttpRequest",
-]
